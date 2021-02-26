@@ -20,6 +20,11 @@ $(function() {
 
   // 加载 footer
   $('#footer').load('./components/footer.html', function() {
-    $('#app').show();
+    init();
   });
 })
+
+function init() {
+  $('#app').show();
+  AOS.init();
+};
