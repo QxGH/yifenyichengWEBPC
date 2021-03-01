@@ -73,7 +73,7 @@ body.active {
 
   .nav-join-box {
     color: #FF5100;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
   }
 }
 
@@ -215,6 +215,7 @@ body.active {
     width: 50%;
     display: flex;
     justify-content: space-between;
+    padding: 0 40px;
   }
   .navbar-nav>li {
     float: none;

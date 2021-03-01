@@ -11,7 +11,7 @@
 }
 .header-container .navbar-brand {
   padding: 0;
-  height: 100%;
+  height: 64px;
 }
 .header-container .navbar-nav a {
   height: 64px;
@@ -22,7 +22,7 @@
 }
 .header-logo-1 {
   display: inline-block;
-  height: 100%;
+  height: 64px;
 }
 .nav-join-box {
   padding-top: 13px;
@@ -37,9 +37,6 @@
   width: 185px;
   padding-left: 15px;
   position: relative;
-}
-.sidebar-offcanvas .nav-join-box .info-box {
-  padding-left: 0;
 }
 .nav-join-box .info-box::before {
   content: '';
@@ -61,6 +58,9 @@
   line-height: 17px;
 }
 
+.navbar-inverse {
+  background: #fff;
+}
 .navbar-inverse .navbar-nav>.active>a, 
 .navbar-inverse .navbar-nav>.active>a:focus, 
 .navbar-inverse .navbar-nav>.active>a:hover {
@@ -76,8 +76,51 @@
   background: #FF5100;
 }
 
+@media screen and (max-width: 1200px) {
+  .nav-join-box .info-box {
+    width: 130px;
+  }
+  .header-container .navbar .content {
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .header-container .navbar .content > .navbar-collapse {
+    -prefix-box-flex: 1; 
+    -webkit-box-flex: 1; 
+    -webkit-flex: 1; 
+    -moz-box-flex: 1; 
+    -ms-flex: 1; 
+    flex: 1; 
+   }
+  .header-container .navbar .content .navbar-header {
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 992px) {
+  .header-container .navbar .content ul {
+    padding: 0;
+    width: auto;
+  }
+  .nav-join-box .logo-box {
+    padding-right: 5px;
+  }
+  .nav-join-box .info-box {
+    padding-left: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
   .header-container .navbar-nav a {
     line-height: 44px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .nav-join-box {
+    padding: 10px 15px;
   }
 }
