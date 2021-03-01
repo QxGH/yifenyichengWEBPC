@@ -1,9 +1,24 @@
-.carousel-inner {
-  height: 500px;
+.banner-container {
+  height: 0;
+  padding-top: 40%;
+  position: relative;
 }
-.carousel-img {
-  display: block;
+.banner-container .carousel-inner {
+  height: 100%;
+}
+.banner-container .carousel-inner .item {
+  height: 100%;
+}
+.banner-container .carousel-img {
+  display: block !important;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+.banner-container .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }

@@ -1,0 +1,164 @@
+.footer-container {
+  width: 100%;
+  height: 560px;
+  background: #FFEAE0;
+  padding: 30px 400px;
+  color: #FF5100;
+  position: relative;
+}
+.footer-container .info-box, .footer-container .join-box {
+  width: 50%;
+  float: left;
+}
+.footer-container .info-title {
+  font-size: 28px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.footer-container label {
+  font-weight: 500;
+}
+.footer-container .qrcode-img {
+  width: 213px;
+  height: 213px;
+  display: block;
+  object-fit: cover;
+}
+.footer-container .form-group {
+  height: 48px;
+  margin-bottom: 15px;
+}
+.footer-container .form-label {
+  width: 55px;
+  line-height: 48px;
+  text-align: left;
+}
+.footer-container .form-ctrl {
+  padding-left: 55px;
+  width: 375px;
+  height: 100%;
+  color: #333;
+}
+.footer-container .input-ctrl {
+  border: none;
+  outline: none;
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px 20px;
+}
+.footer-container .textarea-ctrl {
+  border: none;
+  outline: none;
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: 96px;
+  padding: 8px 20px;
+  resize: none;
+}
+.footer-container .submit-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #FF5100;
+}
+.footer-container .submit-btn:hover {
+  background: rgba(255, 81, 0, .9);
+}
+.footer-container .beian {
+  color: #fff;
+  height: 128px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 400px 30px;
+}
+.footer-container .beian-box {
+  position: relative;
+  height: 100%;
+}
+.footer-container .beian-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+
+@media screen and (max-width: 1600px) {
+  .footer-container {
+    padding: 30px 300px;
+  }
+  .footer-container .beian {
+    padding: 0 300px 30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .footer-container {
+    padding: 30px 200px;
+  }
+  .footer-container .beian {
+    padding: 0 200px 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-container {
+    padding: 30px 100px;
+  }
+  .footer-container .beian {
+    padding: 0 100px 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-container {
+    height: auto;
+    padding: 30px 10px;
+  }
+  .footer-container .info-box, .footer-container .join-box {
+    float: none;
+    width: 375px;
+    margin: 50px auto 0;
+  }
+  .footer-container .info-box {
+    text-align: center;
+  }
+  .footer-container .qrcode-img {
+    margin: 0 auto;
+  }
+  .footer-container .join-title {
+    text-align: center;
+    font-size: 28px;
+  }
+  .footer-container .join-box {
+    margin-top: 50px;
+  }
+  .footer-container .beian {
+    position: static;
+    padding: 0 0 30px;
+  }
+  .footer-container .beian-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-container .info-box, .footer-container .join-box {
+    width: 300px;
+  }
+  .footer-container .form-ctrl {
+    padding-left: 55px;
+    width: 300px;
+    height: 100%;
+    color: #333;
+  }
+}

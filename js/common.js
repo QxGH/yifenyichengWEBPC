@@ -1,10 +1,10 @@
 $(function() {
   // sessionStorage.setItem("adata", "123");
   // 加载 header
-  $('#header').load('./components/header.html', function() {
+  $('#header').load('./components/header.html', () => {
     // 选中导航
     $(".nav a").each(function(){  
-      $this = $(this);  
+      let $this = $(this);  
       let href = $this[0].href.replace(window.location.origin, '')
       let pathname = window.location.pathname;
       if(href == pathname){  

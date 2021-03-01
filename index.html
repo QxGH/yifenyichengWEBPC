@@ -12,7 +12,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/jquery@2.1.4/dist/jquery.min.js"></script>
   <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-  <script src="./js/common.js"></script>
+  <script src="https://unpkg.com/babel@4.7.16/browser.js"></script>
+  <script src="https://unpkg.com/babel@4.7.16/browser-polyfill.js"></script>
+  <script src="./js/common.js" type="text/babel"></script>
 </head>
 
 <body>
@@ -20,10 +22,11 @@
     <header id="header"></header>
     <section class="body" id="body">
       <div id="banner" class="banner"></div>
-      <div id="main" class="main">
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+      <div id="main" class="main home">
+        <!-- <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
           AOS - Animate on scroll library
-        </p>
+        </p> -->
+        home
       </div>
     </section>
     <footer id="footer"></footer>

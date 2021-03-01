@@ -10,11 +10,6 @@
   box-sizing: border-box;
 }
 
-html, body, #app {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   font-size: 14px;
   color: #333;
@@ -45,8 +40,9 @@ img {
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
   color: #409EFF;
+  outline: none;
 }
 
 table,tr,td { 
@@ -190,17 +186,17 @@ button {
 
 input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset !important;}
 
-input::-webkit-input-placeholder{
-  color:#C0C4CC;
-}
-input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-  color:#C0C4CC;
-}
-input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-  color:#C0C4CC;
-}
-input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-  color:#C0C4CC;
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999 !important;
+}  
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #999 !important;
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+  color: #999 !important;
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #999 !important;
 }
 
 .w-240 {width: 240px;}
@@ -231,6 +227,7 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
 .c-blue {color: #2589ff;}
 .c-red {color: #FF5050;}
 .c-yellow {color: #FFDD52;}
+.c-white {color: #fff;}
 
 .fs-12 {font-size: 12px;}
 .fs-13 {font-size: 13px;}
@@ -332,4 +329,5 @@ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
 
 .app-container {
   display: none;
+  padding-top: 64px;
 }
