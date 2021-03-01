@@ -1,7 +1,7 @@
 $(function() {
   // sessionStorage.setItem("adata", "123");
   // 加载 header
-  $('#header').load('./components/header.html', () => {
+  $('#header').load('./components/header.html', function() {
     // 选中导航
     $(".nav a").each(function(){  
       let $this = $(this);  
