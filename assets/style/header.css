@@ -48,6 +48,9 @@
   top: 9px;
   left: 0;
 }
+.sidebar-offcanvas .nav-join-box .info-box::before {
+  display: none;
+}
 .nav-join-box .phone {
   font-size: 18px;
   line-height: 22px;
@@ -122,5 +125,17 @@
 @media screen and (max-width: 760px) {
   .nav-join-box {
     padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .nav-join-box {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 458px) {
+  .home-2-box .items {
+    padding: 0 5px;
   }
 }
