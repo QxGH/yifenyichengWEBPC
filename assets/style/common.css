@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import "./home.css";
 @import "./header.css";
 @import "./banner.css";
 @import "./footer.css";
