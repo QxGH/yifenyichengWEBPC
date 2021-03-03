@@ -237,12 +237,12 @@
 .home-3 {
   padding: 140px 0 20px;
 }
-.home-3-icon, .home-3-title {
+.home-public-icon, .home-3-title {
   display: block;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.home-3-icon {
+.home-public-icon {
   width: 212px;
   height: 60px;
   background-image: url('../images/home/home-3-icon.png');
@@ -266,6 +266,7 @@
   color: #fff;
   width: 160px;
   background: #FF5100;
+  text-align: center;
 }
 .join-table tr:nth-child(odd) {
   background:#F8F8F8;
@@ -278,11 +279,22 @@
 }
 .join-table .td-box {
   min-height: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
 }
 .join-table .left-box,
 .join-table .right-box {
   float: left;
-  min-height: 96px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .join-table .left-box {
   width: 40%;
@@ -290,6 +302,197 @@
 .join-table .right-box {
   width: 60%;
 }
+.join-table .td-box p {
+  max-width: 455px;
+  margin: auto;
+}
+.join-table .addr-box {
+  padding-left: 40px;
+}
+.join-table .addr-box p {
+  margin: 0;
+  text-align: left;
+}
+.home-4 {
+  margin-top: 100px;
+}
+.home-4-title {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 222px;
+  height: 52px;
+  background-image: url('../images/home/home-4-title.png');
+  margin: 25px auto 0;
+}
+.home-4-box {
+  max-width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+.home-4 .item {
+  width: 240px;
+  height: 240px;
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 10px;
+}
+.home-4 .item:nth-child(odd) {
+  background: #fff;
+}
+.home-4 .item:nth-child(odd) .title {
+  color: #666666;
+} 
+.home-4 .item:nth-child(odd) .data {
+  color: #FF5100;
+} 
+.home-4 .item:nth-child(even) {
+  background: #FF5100;
+}
+.home-4 .item:nth-child(even) .title,
+.home-4 .item:nth-child(even) .data {
+  color: #fff;
+} 
+.home-4 .title {
+  font-size: 20px;
+  margin-top: 60px;
+  line-height: 28px;
+} 
+.home-4 .data {
+  font-size: 40px;
+  margin-top: 24px;
+  line-height: 48px;
+} 
+
+.home-5 {
+  margin-top: 100px;
+}
+.home-5-title {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 222px;
+  height: 52px;
+  background-image: url('../images/home/home-5-title.png');
+  margin: 25px auto 0;
+}
+.home-5-box {
+  max-width: 1200px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 25px 0 80px;
+}
+.home-5 {
+  height: 220px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  border-radius: 8px;
+}
+
+
+
+
+.home-7 {
+  margin-top: 100px;
+}
+.home-7-title {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 148px;
+  height: 52px;
+  background-image: url('../images/home/home-7-title.png');
+  margin: 25px auto 0;
+}
+.home-7-box {
+  max-width: 1200px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 25px 0 80px;
+  overflow: hidden;
+}
+.home-7-box .items {
+  position: relative;
+}
+.home-7-box .item {
+  position: absolute;
+}
+.home-7-box .item-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 50%;
+  border: 20px solid #f8f8f8;
+  text-align: center;
+  line-height: 160px;
+}
+.home-7-box .item-1,
+.home-7-box .item-2,
+.home-7-box .item-3 {
+  top: 0;
+}
+.home-7-box .item-1 {
+  left: 30px;
+}
+.home-7-box .item-2 {
+  left: 400px;
+}
+.home-7-box .item-3 {
+  left: 770px;
+}
+.home-7-box .item-4,
+.home-7-box .item-5,
+.home-7-box .item-6 {
+  top: 280px;
+}
+.home-7-box .item-4 {
+  left: 230px;
+}
+.home-7-box .item-5 {
+  left: 600px;
+}
+.home-7-box .item-6 {
+  left: 970px;
+}
+.home-7-box .index {
+  color: #FF5100;
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: bold;
+  position: absolute;
+  top: -42px;
+  right: 14px;
+}
+.home-7-box .icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 96px;
+  height: 57px;
+  vertical-align: middle;
+}
+.home-7-box .icon-1 {
+  background-image: url('../images/home/home-7-step-1.png');
+}
+.home-7-box .icon-2 {
+  background-image: url('../images/home/home-7-step-2.png');
+}
+.home-7-box .icon-3 {
+  background-image: url('../images/home/home-7-step-3.png');
+}
+.home-7-box .icon-4 {
+  background-image: url('../images/home/home-7-step-4.png');
+}
+.home-7-box .icon-5 {
+  background-image: url('../images/home/home-7-step-5.png');
+}
+.home-7-box .icon-6 {
+  background-image: url('../images/home/home-7-step-6.png');
+}
+
 
 
 
@@ -299,6 +502,41 @@
   }
   .home-2-box .items {
     padding: 0 20px;
+  }
+  .home-3 {
+    padding: 50px 10px 20px;
+  }
+  .home-3-title {
+    margin: 25px auto;
+  }
+  .join-table .td-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .join-table .left-box,
+  .join-table .right-box {
+    width: auto;
+  }
+  .join-table .addr-box {
+    padding-left: 35%;
+  }
+  .home-7-box .item {
+    position: static;
+    top: auto;
+    left: auto;
+    float: left;
+    width: 33.33%;
+  }
+  .home-7-box .item-box {
+    margin: 0 auto 80px;
+  }
+  .home-4-box {
+    padding: 0 10px;
   }
 }
 
@@ -310,6 +548,15 @@
   }
   .home-2-bg-icon .icon-2 {
     right: 50px;
+  }
+  .join-table .addr-box {
+    padding-left: 30%;
+  }
+  .home-7-box .item {
+    width: 50%;
+  }
+  .home-4 .item {
+    width: 33.33%;
   }
 }
 
@@ -348,10 +595,28 @@
   .home-2-box .items {
     margin-top: 15px;
   }
+  .join-table .addr-box {
+    padding-left: 15%;
+  }
+  .home-4 .item {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 760px) {
   .home-1-box .item {
     height: auto;
+  }
+  .join-table .addr-box {
+    padding-left: 0;
+  }
+  .home-7-box .item {
+    width: 100%;
+  }
+  .home-7-box .item-box {
+    margin: 0 auto 40px;
+  }
+  .home-4 .item {
+    width: 100%;
   }
 }
