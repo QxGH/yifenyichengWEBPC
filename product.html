@@ -60,9 +60,129 @@
             </ul>
           </div>
         </div>
+        <div class="product-2">
+          <div class="product-2-box">
+            <div class="tabs-box">
+              <ul class="items clearfix">
+                <li class="item active" onclick="tabsChange(1, $(this))">招牌米粉</li>
+                <li class="item" onclick="tabsChange(2, $(this))">炒米粉</li>
+                <li class="item" onclick="tabsChange(3, $(this))">炒馕</li>
+                <li class="item" onclick="tabsChange(4, $(this))">炒年糕</li>
+              </ul>
+              <i class="active-bar" id="activeBar"></i>
+            </div>
+            <div class="items">
+              <div class="row-1 clearfix">
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-1-1.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-1-2.png" draggable="false" alt="">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row-2 clearfix hide">
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-2-1.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-2-2.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-2-3.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-2-4.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-2-5.png" draggable="false" alt="">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row-3 clearfix hide">
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-3-1.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-3-2.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-3-3.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-3-4.png" draggable="false" alt="">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row-4 clearfix hide">
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-4-1.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-4-2.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-4-3.png" draggable="false" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-box">
+                    <img class="img" src="./assets/images/product/row-4-4.png" draggable="false" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
     <footer id="footer"></footer>
   </div>
+
+  <script>
+    /**
+     *  tab 切换
+     */
+    function tabsChange(val, $this) {
+      if($this.hasClass('active')) {
+        return;
+      };
+      var x = (val-1) * 100 + '%';
+      $('#activeBar').css('transform', 'translateX('+x+')');
+      $('.row-'+val).removeClass('hide').siblings().addClass('hide');
+      var later = setTimeout(function() {
+        $this.addClass('active').siblings().removeClass('active');
+        window.clearTimeout(later)
+      }, 150)
+    };
+  </script>
 </body>
 </html>

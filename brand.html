@@ -19,10 +19,97 @@
     <section class="body" id="body">
       <div id="banner" class="banner"></div>
       <div id="main" class="main">
-        brand
+        <div class="brand-1">
+          <i class="home-public-icon"></i>
+          <i class="brand-1-title"></i>
+          <div class="brand-1-box">
+            <div class="tabs-box">
+              <ul class="items clearfix">
+                <li class="item active" onclick="tabsChange(1, $(this))">招牌米粉</li>
+                <li class="item" onclick="tabsChange(2, $(this))">炒米粉</li>
+                <li class="item" onclick="tabsChange(3, $(this))">炒馕</li>
+                <li class="item" onclick="tabsChange(4, $(this))">炒年糕</li>
+              </ul>
+              <i class="active-bar" id="activeBar"></i>
+            </div>
+            <div class="picture-view">
+
+            </div>
+          </div>
+        </div>
+        <div class="brand-2">
+          <i class="home-public-icon"></i>
+          <i class="brand-2-title"></i>
+          <div class="brand-2-box">
+            <ul class="items row" id="brandList">
+              <!-- <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item">
+                <div class="item-box">
+                  <div class="img-box">
+                    <img src="https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way" class="img" draggable="false" alt="">
+                  </div>
+                  <div class="info-box">
+                    <p class="name overflow-text">门店名称</p>
+                    <p class="addr overflow-text">门店地址</p>
+                  </div>
+                </div>
+              </li> -->
+            </ul>
+            <button type="button" class="load-more-btn">点击加载更多</button>
+          </div>
+        </div>
       </div>
     </section>
     <footer id="footer"></footer>
   </div>
+
+  <script>
+    function tabsChange(val, $this) {
+      if($this.hasClass('active')) {
+        return;
+      };
+      var x = (val-1) * 100 + '%';
+      $('#activeBar').css('transform', 'translateX('+x+')');
+      var later = setTimeout(function() {
+        $this.addClass('active').siblings().removeClass('active');
+        window.clearTimeout(later)
+      }, 150);
+    };
+
+    function getList() {
+      var arr = [
+        { name: '门店名称1', addr: '门店地址1' },
+        { name: '门店名称2', addr: '门店地址2' },
+        { name: '门店名称3', addr: '门店地址3' },
+        { name: '门店名称4', addr: '门店地址4' },
+        { name: '门店名称5', addr: '门店地址5' },
+        { name: '门店名称6', addr: '门店地址6' },
+        { name: '门店名称7', addr: '门店地址7' },
+        { name: '门店名称8', addr: '门店地址8' },
+        { name: '门店名称9', addr: '门店地址9' },
+        { name: '门店名称10', addr: '门店地址10' },
+        { name: '门店名称11', addr: '门店地址11' },
+        { name: '门店名称12', addr: '门店地址12' }
+      ];
+      var html = '';
+      arr.map(function(item, index) {
+        html += '<li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item">'+
+                  '<div class="item-box">'+
+                    '<div class="img-box">'+
+                      '<img src="https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way" class="img" draggable="false" alt="">'+
+                    '</div>'+
+                    '<div class="info-box">'+
+                      '<p class="name overflow-text">'+item.name+'</p>'+
+                      '<p class="addr overflow-text">'+item.addr+'</p>'+
+                    '</div>'+
+                  '</div>'+
+                '</li>';
+      });
+      $('#brandList').append(html);
+    }
+
+    $(function() {
+      getList();
+    })
+  </script>
 </body>
 </html>

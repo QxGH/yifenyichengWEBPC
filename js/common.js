@@ -4,9 +4,12 @@ $(function() {
   $('#header').load('./components/header.html', function() {
     // 选中导航
     $(".nav a").each(function(){  
-      let $this = $(this);  
-      let href = $this[0].href.replace(window.location.origin, '')
-      let pathname = window.location.pathname;
+      var $this = $(this);  
+      var href = $this[0].href.replace(window.location.origin, '');
+      var pathname = window.location.pathname;
+      if(pathname == '/index.html') {
+        pathname = '/'
+      };
       if(href == pathname){  
         $this.parent().addClass("active");  
       } else {
