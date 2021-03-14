@@ -3,6 +3,8 @@
 @import "./home.css";
 @import "./product.css";
 @import "./brand.css";
+@import "./store.css";
+@import "./news.css";
 @import "./header.css";
 @import "./banner.css";
 @import "./footer.css";
@@ -235,6 +237,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .c-red {color: #FF5050;}
 .c-yellow {color: #FFDD52;}
 .c-white {color: #fff;}
+.c-orange {color: #FF5100;}
 
 .fs-12 {font-size: 12px;}
 .fs-13 {font-size: 13px;}
@@ -242,6 +245,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .fs-15 {font-size: 15px;}
 .fs-16 {font-size: 16px;}
 .fs-18 {font-size: 18px;}
+.fs-20 {font-size: 20px;}
 .fs-30 {font-size: 30px;}
 
 .lh-20 {line-height: 20px;}

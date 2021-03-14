@@ -17,19 +17,24 @@
   <div class="app-container" id="app">
     <header id="header"></header>
     <section class="body" id="body">
-      <div id="banner" class="banner"></div>
       <div id="main" class="main">
+        <div class="new-details">
+          <p class="news-title" id="newsTitle"></p>
+          <div class="news-info">
+            <span id="newsDate"></span>
+            <span> | </span>
+            <span id="newsType"></span>
+          </div>
+          <div class="news-html" id="newsHtml"></div>
+        </div>
         <div class="news-list">
-          <div class="tabs-box">
-            <ul class="items clearfix">
-              <li class="item active" onclick="tabsChange(1, $(this))">全部</li>
-              <li class="item" onclick="tabsChange(2, $(this))">分类名称</li>
-            </ul>
-            <i class="active-bar" id="activeBar"></i>
+          <div class="title-box">
+            <i class="home-public-icon"></i>
+            <i class="news-details-title"></i>
           </div>
           <div class="news-items">
             <ul class="items row" id="newsList">
-              <!-- <li class="col-lg-4 col-sm-6 col-xs-12 item" onclick="toNewsDetails()">
+              <!-- <li class="col-lg-4 col-sm-6 col-xs-12 item">
                 <div class="item-box">
                   <div class="img-box">
                     <img src="https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way" class="img" draggable="false" alt="">
@@ -47,10 +52,6 @@
                 </div>
               </li> -->
             </ul>
-            <button type="button" class="load-more-btn" onclick="loadMore()">
-              <i class="loading-icon v-mid mg-r-5 hide" id="loadingMoreIcon"></i>
-              <span class="v-mid" id="loadingText">点击加载更多</span>
-            </button>
           </div>
         </div>
       </div>
@@ -59,46 +60,39 @@
   </div>
 
   <script>
-    var pageData = {
-      current: 1,
-      size: 9
-    };
-    
-    // tabs 切换
-    function tabsChange(val, $this) {
-      if($this.hasClass('active')) {
-        return;
-      };
-      var x = (val-1) * 100 + '%';
-      $('#activeBar').css('transform', 'translateX('+x+')');
-      var later = setTimeout(function() {
-        $this.addClass('active').siblings().removeClass('active');
-        window.clearTimeout(later)
-      }, 150);
-      // 清空 list
-      $('#newsList').empty();
-      pageData.current = 1;
-      loadMore();
+    // 获取详情
+    function getDetails() {
+      let formData = {}
+      // $.ajax({
+      //   url: '',
+      //   type: 'POST',
+      //   data: formData,
+      //   complete: function() {
+
+      //   },
+      //   success: function(res) {
+
+      //   },
+      //   error: function(xhr, status, error) {
+
+      //   }
+      // })
+      $('#newsTitle').text('恭贺！“一粉一城”与饿了么 口碑 达成战略合作！');
+      $('#newsDate').text('2020-12-31 11:15:26');
+      $('#newsType').text('新闻分类名称');
+      $('#newsHtml').html('<p>新闻详情</p>');
     };
 
-    // 加载list
     function getList() {
       var arr = [
         { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
         { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
         { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
-        { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
-        { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
-        { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
-        { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
-        { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' },
-        { img: 'https://cdn.xingchen.cn/FnE49clq4Ur_tKWQdTMMEfJY_way', title: '标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题', details: '详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情' }
       ];
       var html = '';
       arr.map(function(item, index) {
-        let newsId = item.id;
         html += 
-        '<li class="col-lg-4 col-sm-6 col-xs-12 item" onclick="toNewsDetails('+newsId+')">'+
+        '<li class="col-lg-4 col-sm-6 col-xs-12 item">'+
           '<div class="item-box">'+
                 '<div class="img-box">'+
                   '<img src="'+item.img+'" class="img" draggable="false" alt="">'+
@@ -122,25 +116,9 @@
       pageData.current++;
     };
 
-    // 加载更多
-    function loadMore() {
-      $('#loadingMoreIcon').removeClass('hide');
-      $('#loadingText').text('正在加载');
-      let later = setTimeout(function() {
-        getList();
-      }, 2000)
-    }
-
-    // 跳转详情
-    function toNewsDetails(id) {
-      let path = '/newsDetails.html?id=' + (id ? id : 0);
-      let origin = location.origin;
-      let href = origin + path;
-      let newsDetailsWindow = window.open('_blank');
-      newsDetailsWindow.location.href = href;
-    };
 
     $(function() {
+      getDetails();
       getList();
     });
   </script>
