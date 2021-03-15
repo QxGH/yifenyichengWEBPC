@@ -76,3 +76,29 @@
 .brand-2 .item-2 .info-box {
   padding-right: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .brand-1-box, .brand-2-box {
+    padding: 0 20px;
+  }
+  .brand-2 .brand-item .info-box {
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .brand-2 .brand-item .info-box {
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .brand-2 .item-1 .img-box, 
+  .brand-2 .item-1 .info-box,
+  .brand-2 .item-2 .img-box, 
+  .brand-2 .item-2 .info-box {
+    float: none;
+  }
+  .brand-2 .brand-item .img-box {
+    width: 100%;
+  }
+}

@@ -90,6 +90,7 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   }
   .header-container .navbar .content > .navbar-collapse {
     -prefix-box-flex: 1; 

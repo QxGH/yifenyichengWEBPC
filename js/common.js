@@ -55,6 +55,11 @@ function ajax(obj, type) {
         obj.beforeSend(xhr)
       };
     },
+    complete: function(xhr, status) {
+      if (isFunction(obj.complete)) {
+        obj.complete(xhr, status)
+      };
+    },
     success: function (result, status, xhr) {
       if (isFunction(obj.success)) {
         obj.success(result, status, xhr)

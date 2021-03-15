@@ -166,6 +166,28 @@
   .product-1-box, .product-2-box {
     padding: 0 20px;
   }
+  .product-2 .tabs-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .product-2 {
+    padding: 10px 0 30px;
+  }
+  .product-2 .row-1 .item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .product-2 .row-2 .item {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  .product-2 .row-3 .item, 
+  .product-2 .row-4 .item {
+    width: 50%;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -175,5 +197,13 @@
   .product-1 .item-box {
     padding: 10px 10px 20px;
     height: auto;
+  }
+  .product-2 .tabs-box {
+    font-size: 16px;
+    height: 42px;
+  }
+  .product-2 .tabs-box .item {
+    line-height: 42px;
+    border-radius: 21px;
   }
 }
