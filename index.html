@@ -545,6 +545,20 @@
     <footer id="footer"></footer>
   </div>
 
+  <script>
+    $ajax.post({
+      url: '/getStoreInfo',
+      success: function (res) {
+        console.log('getStoreInfo ->', res);
+      }
+    });
+    $ajax.get({
+      url: '/getShopList',
+      success: function (res) {
+        console.log('getShopList ->', res);
+      }
+    });
+  </script>
 </body>
 
 </html>
