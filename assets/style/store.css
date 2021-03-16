@@ -60,7 +60,73 @@
   transform: translateX(-50%);
 }
 .store-1 .picture-view {
+  margin-top: 50px;
+}
+.store-1 .carousel-box {
+  width: 500px;
   height: 500px;
+  float: left;
+}
+.store-1 .carousel-box .carousel,
+.store-1 .carousel-box .carousel-inner,
+.store-1 .carousel-box .carousel-inner>.item,
+.store-1 .carousel-box .carousel-inner>.item>img {
+  height: 100%;
+}
+
+.store-1 .view-box {
+  width: 700px;
+  float: left;
+}
+.store-1 .view-box .img-box {
+  float: left;
+  position: relative;
+}
+.store-1 .img-box:first-child,
+.store-1 .img-box:nth-child(2),
+.store-1 .img-box:nth-child(3) {
+  width: 33.33%;
+  /* height: 234px; */
+  padding-top: 234px;
+}
+.store-1 .img-box:nth-child(4),
+.store-1 .img-box:nth-child(5) {
+  width: 50%;
+  /* height: 266px; */
+  padding-top: 266px;
+}
+.store-1 .view-box .img-box .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 1200px) {
+  .store-1 .carousel-box {
+    width: 100%;
+  }
+  .store-1 .view-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .store-1 .carousel-box {
+    height: 400px;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .store-1 .carousel-box {
+    height: 350px;
+  }
+  .store-1 .view-box .img-box {
+    width: 100%;
+    padding-top: 100%;
+  }
 }
 
 
@@ -163,5 +229,21 @@
 @media screen and (max-width: 1200px) {
   .store-1-box, .store-2-box {
     padding: 0 20px;
+  }
+  .store-1 .tabs-box .item {
+    width: 200px;
+  }
+  .store-1 .tabs-box .active-bar {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .store-1 .tabs-box .item {
+    width: 100px;
+    font-size: 16px;
+  }
+  .store-1 .tabs-box .active-bar {
+    width: 100px;
   }
 }

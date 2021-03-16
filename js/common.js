@@ -9,6 +9,8 @@ $(function () {
       var pathname = window.location.pathname;
       if (pathname == '/index.html') {
         pathname = '/'
+      } else if(pathname  == '/newsDetails.html') {
+        pathname = '/news.html'
       };
       if (href == pathname) {
         $this.parent().addClass("active");
@@ -24,6 +26,38 @@ $(function () {
   // 加载 footer
   $('#footer').load('./components/footer.html', function () {
     init();
+  });
+
+  // 展示品牌加盟弹窗
+  setTimeout(() => {
+    $('#brandJoinDialog').show(0, function() {
+      $(this).addClass('visible');
+    })
+  }, 1000);
+  // 关闭品牌加盟弹窗
+  $('#brandJoinDialogCloseBtn').click(function() {
+    $('#brandJoinDialog').removeClass('visible');
+    setTimeout(() => {
+      $('#brandJoinDialog').hide();
+    }, 500);
+  });
+  // 品牌加盟弹窗点击
+  $('#brandJoinDialogImg').click(function() {
+    alert('click')
+  });
+
+  // 加盟咨询 点击显示弹窗
+  $('#joinConsultativeHandle').click(function() {
+    $('#joinConsultativeDialog').show(0, function() {
+      $('#joinConsultativeDialog').addClass('visible');
+    })
+  });
+  // 加盟咨询 关闭弹窗
+  $('#joinConsultativeDialogCloseBtn').click(function() {
+    $('#joinConsultativeDialog').removeClass('visible');
+    setTimeout(() => {
+      $('#joinConsultativeDialog').hide();
+    }, 500);
   });
 })
 
@@ -69,7 +103,7 @@ function ajax(obj, type) {
       if (isFunction(obj.error)) {
         obj.error(xhr, status, error)
       } else {
-        console.error('ajax error')
+        console.error('ajax error -> ', error)
       };
     }
   })
@@ -86,3 +120,25 @@ var $ajax = new function () {
 /**
  * ajax end
  */
+
+/**
+ * 提交加盟咨询
+ */
+function submitJoinConsultatice() {
+  var formData = {
+    name: $('#joinConsultativeName').val(),
+    phone: $('#joinConsultativePhone').val(),
+    other: $('#joinConsultativeOther').val(),
+  };
+
+  // $ajax.post({
+  //   url: '/submitJoinConsultatice',
+  //   data: formData,
+  //   success: function (res) {
+  //     console.log('submitJoinConsultatice ->', res);
+  //     $('#joinConsultativeName').val('');
+  //     $('#joinConsultativePhone').val('');
+  //     $('#joinConsultativeOther').val('');
+  //   }
+  // });
+}

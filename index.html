@@ -545,6 +545,61 @@
     <footer id="footer"></footer>
   </div>
 
+  <!-- 品牌加盟弹窗 start -->
+  <div class="brand-join-dialog" id="brandJoinDialog">
+    <i class="closed-icon" id="brandJoinDialogCloseBtn"></i>
+    <div class="img-box">
+      <img src="https://cdn.xingchen.cn/FlMMu-CZpa8JFS6F8GFyYxxpp3jf" alt="" class="img" id="brandJoinDialogImg">
+    </div>
+  </div>
+  <!-- 品牌加盟弹窗 end -->
+
+  <!-- 加盟咨询 start -->
+  <div class="join-consultative-handle clearfix" id="joinConsultativeHandle">
+    <div class="img-box"></div>
+    <div class="text-box">
+      <p>加盟咨询</p>
+      <p>Consultion</p>
+    </div>
+  </div>
+  <div class="join-consultative-dialog" id="joinConsultativeDialog">
+    <i class="closed-icon" id="joinConsultativeDialogCloseBtn"></i>
+    <div class="dialog-header">
+      <p class="title">加盟咨询</p>
+      <span class="icon-box">
+        <i class="icon left-icon"></i>
+        <i class="icon right-icon"></i>
+      </span>
+    </div>
+    <div class="dialog-body">
+      <div class="form-group clearfix">
+        <label class="form-label">姓名：</label>
+        <div class="form-ctrl">
+          <input type="text" class="input-ctrl" name="name" id="joinConsultativeName" placeholder="请输入您的姓名">
+        </div>
+      </div>
+      <div class="form-group clearfix">
+        <label class="form-label">电话：</label>
+        <div class="form-ctrl">
+          <input type="text" class="input-ctrl" name="phone" id="joinConsultativePhone" placeholder="请输入您的电话">
+        </div>
+      </div>
+      <div class="form-group clearfix">
+        <label class="form-label">其他：</label>
+        <div class="form-ctrl">
+          <textarea class="textarea-ctrl" name="pther" id="joinConsultativeOther" placeholder="请输入您想咨询的问题（非必填）"></textarea>
+        </div>
+      </div>
+      <div class="form-group clearfix">
+        <label class="form-label"></label>
+        <div class="form-ctrl">
+          <button type="button" class="submit-btn" id="joinConsultativeSubmit">提交</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 加盟咨询 end -->
+
   <script>
     $ajax.post({
       url: '/getStoreInfo',

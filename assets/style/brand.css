@@ -98,7 +98,11 @@
   .brand-2 .item-2 .info-box {
     float: none;
   }
-  .brand-2 .brand-item .img-box {
+  .brand-2 .brand-item .img-box,
+  .brand-2 .brand-item .info-box {
     width: 100%;
+  }
+  .brand-2 .brand-item .info-box {
+    margin-top: 10px;
   }
 }

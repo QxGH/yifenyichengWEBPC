@@ -458,8 +458,25 @@
 .home-7-box .item {
   position: absolute;
 }
+.home-7-box .item-1:before,
+.home-7-box .item-2:before,
+.home-7-box .item-4:before,
+.home-7-box .item-5:before {
+  content: '';
+  display: block;
+  width: 405px;
+  height: 115px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('../images/home/home-7-line.png');
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 70px;
+}
 .home-7-box .item-box {
   position: relative;
+  z-index: 9;
   width: 200px;
   height: 200px;
   background: #fff;

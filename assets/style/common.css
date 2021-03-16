@@ -342,3 +342,241 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   display: none;
   padding-top: 64px;
 }
+
+.brand-join-dialog {
+  width: 600px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -30px);
+  z-index: 997;
+  opacity: 0;
+  display: none;
+  transition-property: transform,opacity;
+  transition-duration: .4s;
+}
+.brand-join-dialog.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.brand-join-dialog .closed-icon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('../images/common/close.png');
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 9;
+  cursor: pointer;
+}
+.brand-join-dialog .img-box {
+  height: 0;
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+}
+.brand-join-dialog .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .brand-join-dialog {
+    top: 30%;
+    width: 90%;
+  }
+}
+
+.join-consultative-handle {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: #FF5100;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 3px;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  z-index: 998;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width .3s;
+}
+.join-consultative-handle:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  width: 163px;
+}
+.join-consultative-handle .img-box {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.join-consultative-handle .text-box {
+  padding-left: 13px;
+  float: left;
+  color: #fff;
+}
+.join-consultative-handle .text-box p:first-child {
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 8px;
+}
+.join-consultative-handle .text-box p:last-child {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.join-consultative-dialog {
+  width: 400px;
+  padding: 30px 25px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -30px);
+  z-index: 999;
+  opacity: 0;
+  display: none;
+  transition-property: transform,opacity;
+  transition-duration: .4s;
+}
+.join-consultative-dialog.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.join-consultative-dialog .closed-icon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('../images/common/close_2.png');
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 9;
+  cursor: pointer;
+}
+.join-consultative-dialog .dialog-header {
+  font-size: 20px;
+  line-height: 22px;
+  color: #FF5100;
+  text-align: center;
+  position: relative;
+}
+.join-consultative-dialog .dialog-header .icon-box {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.join-consultative-dialog .dialog-header .icon {
+  display: block;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #FF5100;
+  position: absolute;
+  top: 50%;
+}
+.join-consultative-dialog .dialog-header .icon:before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #FF5100;
+  opacity: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+.join-consultative-dialog .dialog-header .left-icon {
+  left: -100px;
+}
+.join-consultative-dialog .dialog-header .left-icon.icon:before {
+  left: -14px;
+}
+.join-consultative-dialog .dialog-header .right-icon {
+  right: -100px;
+}
+.join-consultative-dialog .dialog-header .right-icon.icon:before {
+  right: -14px;
+}
+.join-consultative-dialog .dialog-body {
+  padding-top: 25px;
+}
+.join-consultative-dialog .form-group {
+  margin-bottom: 20px;
+  /* height: 40px; */
+  line-height: 40px;
+  color: #666;
+  font-size: 16px;
+}
+.join-consultative-dialog .form-group:last-child {
+  margin-bottom: 0;
+}
+.join-consultative-dialog .form-label {
+  display: block;
+  width: 50px;
+  text-align: right;
+  font-weight: 500;
+  float: left;
+  margin: 0;
+}
+.join-consultative-dialog .form-ctrl {
+  padding-left: 55px;
+}
+.join-consultative-dialog .input-ctrl {
+  height: 40px;
+}
+.join-consultative-dialog .input-ctrl,
+.join-consultative-dialog .textarea-ctrl {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  background: #EFEFEF;
+  padding: 5px 12px;
+  color: #666;
+}
+.join-consultative-dialog .textarea-ctrl {
+  height: 88px;
+  resize: none;
+}
+.join-consultative-dialog .submit-btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: #FF5100;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  color: #fff;
+  transition: opacity .3s;
+}
+.join-consultative-dialog .submit-btn:hover {
+  opacity: .9;
+}
