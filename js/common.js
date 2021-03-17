@@ -47,11 +47,11 @@ $(function () {
   });
 
   // 加盟咨询 点击显示弹窗
-  $('#joinConsultativeHandle').click(function() {
-    $('#joinConsultativeDialog').show(0, function() {
-      $('#joinConsultativeDialog').addClass('visible');
-    })
-  });
+  // $('#joinConsultativeHandle').click(function() {
+  //   $('#joinConsultativeDialog').show(0, function() {
+  //     $('#joinConsultativeDialog').addClass('visible');
+  //   })
+  // });
   // 加盟咨询 关闭弹窗
   $('#joinConsultativeDialogCloseBtn').click(function() {
     $('#joinConsultativeDialog').removeClass('visible');
@@ -62,7 +62,7 @@ $(function () {
 })
 
 function init() {
-  $('#app').show();
+  $('#app').show(0);
   AOS.init();
 };
 
@@ -149,4 +149,54 @@ function submitJoinConsultatice() {
   //     $('#joinConsultativeOther').val('');
   //   }
   // });
+}
+
+// 加盟咨询 拖动
+var mouseDownTime = '';
+function joinConsultativeMousedown(e) {
+  var box = $('#joinConsultativeHandle');
+  mouseDownTime = new Date().getTime();
+
+  var event = e || window.event;
+  var _target = event.target
+  var starty = event.clientY;
+  var sb_bky = starty - box[0].offsetTop;
+  var wh = window.innerHeight;
+
+  if (event.preventDefault) {
+    event.preventDefault();
+  } else {
+    event.returnValue = false;
+  };
+
+  document.onmousemove = function(ev) {
+    var event_ = ev || window.event;
+    // debugger;
+    
+    var endy = event_.clientY - sb_bky;
+    if (endy <= 64) {
+      endy = 64;
+    };
+    var mainContainerH = document.body.offsetHeight;
+    // debugger;
+    if(endy > mainContainerH-56) {
+      endy = mainContainerH-56;
+    };
+    // debugger;
+    // this.downloadManageTop = endy;
+    $('#joinConsultativeHandle').css('top', endy+'px')
+  }
+  document.onmouseup = function() {
+    document.onmousemove = null;
+  };
+}
+function joinConsultativeMouseup(e) {
+  document.onmousemove = null;
+  let time = new Date().getTime();
+  if((time - mouseDownTime) < 200){
+    // 打开弹窗
+    $('#joinConsultativeDialog').show(0, function() {
+      $('#joinConsultativeDialog').addClass('visible');
+    })
+  };
 }

@@ -22,7 +22,8 @@
   width: 213px;
   height: 213px;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .footer-container .form-group {
   height: 48px;
@@ -153,11 +154,14 @@
 
 @media screen and (max-width: 992px) {
   .footer-container .info-box, .footer-container .join-box {
-    width: 300px;
+    width: 100%;
+  }
+  .footer-container .join-form {
+    padding: 0 10px;
   }
   .footer-container .form-ctrl {
     padding-left: 55px;
-    width: 300px;
+    width: 100%;
     height: 100%;
     color: #333;
   }

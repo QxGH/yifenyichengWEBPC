@@ -23,7 +23,8 @@
 .product-1 .item-box {
   height: 350px;
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   opacity: 1;
   border-radius: 8px;
   padding: 40px;
@@ -79,7 +80,10 @@
   position: relative;
   font-size: 20px;
   color: #666;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .product-2 .tabs-box .items {
   position: relative;
@@ -108,8 +112,14 @@
   height: 100%;
   line-height: 56px;
   border-radius: 28px;
+  -webkit-transition: -webkit-transform .3s cubic-bezier(.645,.045,.355,1);
+  transition: -webkit-transform .3s cubic-bezier(.645,.045,.355,1);
+  -o-transition: transform .3s cubic-bezier(.645,.045,.355,1);
   transition: transform .3s cubic-bezier(.645,.045,.355,1);
-  transform: translateX(0);
+  transition: transform .3s cubic-bezier(.645,.045,.355,1), -webkit-transform .3s cubic-bezier(.645,.045,.355,1);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .product-2 .row-1,
 .product-2 .row-2,

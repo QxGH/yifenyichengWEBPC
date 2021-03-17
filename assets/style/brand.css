@@ -21,13 +21,17 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 1000px;
 }
 .brand-origin-des {
   color: #666;
   font-size: 0;
   text-align: center;
+}
+.brand-2 {
+  overflow: hidden;
 }
 .brand-2-title {
   background-image: url('../images/brand/brand-2-title.png');
@@ -59,7 +63,8 @@
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 1200px;
 }
 .brand-2 .item-1 .img-box,

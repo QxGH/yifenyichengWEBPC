@@ -12,7 +12,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -20,6 +21,11 @@ body {
   color: #333;
   font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
   background: #fff;
+}
+
+.app-container {
+  display: none;
+  padding-top: 64px;
 }
 
 input, textarea {
@@ -109,7 +115,8 @@ button {
 .overflow-text {
   max-width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -129,7 +136,8 @@ button {
     width: 8px;
     height: 8px;
     background: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border: none;
   }
 
@@ -193,17 +201,17 @@ button {
 /* } */
 
 
-input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset !important;}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset !important; box-shadow: 0 0 0px 1000px white inset !important;}
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #999 !important;
-}  
+}  
 input:-moz-placeholder, textarea:-moz-placeholder {
   color: #999 !important;
 } 
 input::-moz-placeholder, textarea::-moz-placeholder { 
   color: #999 !important;
-} 
+} 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #999 !important;
 }
@@ -320,14 +328,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-1 {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .align-items-cennter {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pos-r {
@@ -337,32 +351,37 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .inline-block {display: inline-block;}
 
-
-.app-container {
-  display: none;
-  padding-top: 64px;
-}
-
 .brand-join-dialog {
   width: 600px;
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   opacity: 1;
   border-radius: 10px;
   overflow: hidden;
   position: fixed;
   top: 15%;
   left: 50%;
-  transform: translate(-50%, -30px);
+  -webkit-transform: translate(-50%, -30px);
+      -ms-transform: translate(-50%, -30px);
+          transform: translate(-50%, -30px);
   z-index: 997;
   opacity: 0;
   display: none;
+  -webkit-transition-property: opacity,-webkit-transform;
+  transition-property: opacity,-webkit-transform;
+  -o-transition-property: transform,opacity;
   transition-property: transform,opacity;
-  transition-duration: .4s;
+  transition-property: transform,opacity,-webkit-transform;
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
 }
 .brand-join-dialog.visible {
   opacity: 1;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .brand-join-dialog .closed-icon {
   width: 20px;
@@ -386,7 +405,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -406,18 +426,22 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   height: 56px;
   border-radius: 28px;
   background: #FF5100;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   padding: 3px;
   position: fixed;
-  top: 40%;
+  bottom: 15%;
   right: 0;
   z-index: 998;
   cursor: pointer;
   overflow: hidden;
+  -webkit-transition: width .3s;
+  -o-transition: width .3s;
   transition: width .3s;
 }
 .join-consultative-handle:hover {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   width: 163px;
 }
 .join-consultative-handle .img-box {
@@ -443,27 +467,51 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   margin-top: 2px;
 }
 
+@media screen and (max-width: 1200px) {
+  .join-consultative-handle {
+    -webkit-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+  }
+  .join-consultative-handle:hover {
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    width: 56px;
+  }
+}
+
 .join-consultative-dialog {
   width: 400px;
   padding: 30px 25px;
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   opacity: 1;
   border-radius: 10px;
   overflow: hidden;
   position: fixed;
   top: 15%;
   left: 50%;
-  transform: translate(-50%, -30px);
+  -webkit-transform: translate(-50%, -30px);
+      -ms-transform: translate(-50%, -30px);
+          transform: translate(-50%, -30px);
   z-index: 999;
   opacity: 0;
   display: none;
+  -webkit-transition-property: opacity,-webkit-transform;
+  transition-property: opacity,-webkit-transform;
+  -o-transition-property: transform,opacity;
   transition-property: transform,opacity;
-  transition-duration: .4s;
+  transition-property: transform,opacity,-webkit-transform;
+  -webkit-transition-duration: .4s;
+       -o-transition-duration: .4s;
+          transition-duration: .4s;
 }
 .join-consultative-dialog.visible {
   opacity: 1;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .join-consultative-dialog .closed-icon {
   width: 20px;
@@ -575,8 +623,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   outline: none;
   border: none;
   color: #fff;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
   transition: opacity .3s;
 }
 .join-consultative-dialog .submit-btn:hover {
   opacity: .9;
+}
+@media screen and (max-width: 768px) {
+  .join-consultative-dialog {
+    width: 90%;
+  }
 }
