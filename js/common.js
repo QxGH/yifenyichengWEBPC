@@ -158,10 +158,8 @@ function joinConsultativeMousedown(e) {
   mouseDownTime = new Date().getTime();
 
   var event = e || window.event;
-  var _target = event.target
   var starty = event.clientY;
   var sb_bky = starty - box[0].offsetTop;
-  var wh = window.innerHeight;
 
   if (event.preventDefault) {
     event.preventDefault();
@@ -171,19 +169,14 @@ function joinConsultativeMousedown(e) {
 
   document.onmousemove = function(ev) {
     var event_ = ev || window.event;
-    // debugger;
-    
     var endy = event_.clientY - sb_bky;
     if (endy <= 64) {
       endy = 64;
     };
     var mainContainerH = document.body.offsetHeight;
-    // debugger;
     if(endy > mainContainerH-56) {
       endy = mainContainerH-56;
     };
-    // debugger;
-    // this.downloadManageTop = endy;
     $('#joinConsultativeHandle').css('top', endy+'px')
   }
   document.onmouseup = function() {
@@ -192,7 +185,7 @@ function joinConsultativeMousedown(e) {
 }
 function joinConsultativeMouseup(e) {
   document.onmousemove = null;
-  let time = new Date().getTime();
+  var time = new Date().getTime();
   if((time - mouseDownTime) < 200){
     // 打开弹窗
     $('#joinConsultativeDialog').show(0, function() {
