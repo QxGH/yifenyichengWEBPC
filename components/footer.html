@@ -52,6 +52,14 @@
 </div>
 <script>
   function submit() {
+    if($('#joinName').val() == '') {
+      alert('请输入您的姓名')
+      return;
+    }
+    if($('#joinPhone').val() == '') {
+      alert('请输入您的电话')
+      return;
+    }
     var formData = {
       name: $('#joinName').val(),
       phone: $('#joinPhone').val(),

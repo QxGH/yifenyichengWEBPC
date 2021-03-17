@@ -125,6 +125,14 @@ var $ajax = new function () {
  * 提交加盟咨询
  */
 function submitJoinConsultatice() {
+  if($('#joinConsultativeName').val() == '') {
+    alert('请输入您的姓名')
+    return;
+  }
+  if($('#joinConsultativePhone').val() == '') {
+    alert('请输入您的电话')
+    return;
+  }
   var formData = {
     name: $('#joinConsultativeName').val(),
     phone: $('#joinConsultativePhone').val(),
